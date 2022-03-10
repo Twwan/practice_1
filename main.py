@@ -2,14 +2,13 @@
 import math
 
 
-def input_x():
-    x = float(input('Введите значение аргумента x: '))
-    return x
-
-
-def input_eps():
-    eps = float(input('Введите точность вычисления EPS(ε): '))
-    return eps
+def get_input(a):
+    while True:
+        print(f'Введите значение {a}: ')
+        try:
+            return float(input())
+        except ValueError as exc:
+            print(f'Введеная строка не является числом.')
 
 
 def answer(x, eps):
@@ -23,15 +22,18 @@ def answer(x, eps):
         summand = float(numerator / denominator)
         y = x + summand
         n += 2
+    return y
 
-    print('Ответ:', y)
+
+def print_ans(y):
+    print(f'Ответ: {y}')
 
 
 def main():
-    x = input_x()
-    eps = input_eps()
+    x = get_input('x')
+    eps = get_input('eps')
     y = answer(x, eps)
+    print_ans(y)
 
-
-if __name__ == "__main__":
+if __name__ == '__main__':
     main()
