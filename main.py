@@ -2,7 +2,7 @@
 import math
 
 
-def get_input(a):
+def get_input(a) -> float:
     while True:
         print(f'Введите значение {a}: ')
         try:
@@ -11,7 +11,7 @@ def get_input(a):
             print(f'Введеная строка не является числом.')
 
 
-def answer(x, eps):
+def answer(x: float, eps: float):
     summand = 1
     n = 3
     y = 0
@@ -25,7 +25,7 @@ def answer(x, eps):
     return y
 
 
-def print_ans(y):
+def print_ans(y: float):
     print(f'Ответ: {y}')
 
 
