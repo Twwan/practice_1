@@ -7,7 +7,7 @@ def get_input(a):
         print(f'Введите значение {a}: ')
         try:
             return float(input())
-        except ValueError as exc:
+        except ValueError as hmm:
             print(f'Введеная строка не является числом.')
 
 
